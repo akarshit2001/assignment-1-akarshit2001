@@ -129,8 +129,18 @@ public class linkedlist<E> implements UseAdt<E> {
 
     @Override
     public void show() {
-
+        Node temp = head;
+        for (int i = 0; i < size; i++) {
+            if (temp != null) {
+                String name = temp.data.getFirst() + " " + temp.data.getLast();
+                System.out.println(i + 1 + " . " + name);
+            } else {
+                System.out.println(" No contact found");
+            }
+            temp = temp.next;
+        }
     }
+
 
     public void printSearchitem(String name) {
         Node check = head;
