@@ -36,6 +36,49 @@ public class linkedlist<E> implements UseAdt<E> {
         }
     }
 
+
+    private Person removeAfter(Node node) {
+        Person response = null;
+        Node temp = node.getNext();
+        if (temp != null) {
+            node.next = temp.getNext();
+            size--;
+
+            response = temp.getData();
+        }
+        return response;
+    }
+
+    private Person removeFirst() {
+        Person response = null;
+        Node temp = head;
+        if (head != null) {
+            head = head.getNext();
+        }
+        if (temp != null) {
+            size--;
+            response = temp.getData();
+        }
+        return response;
+    }
+
+    public boolean removeAt(int index) {
+        Person response = null;
+        boolean re = false;
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            response = removeFirst();
+
+            re = true;
+        } else {
+            Node pr = getIndex(index - 1);
+            response = removeAfter(pr);
+            re = true;
+        }
+        return re;
+    }
+
     @Override
     public void add(Person item) {
         add(size, item);
@@ -79,7 +122,8 @@ public class linkedlist<E> implements UseAdt<E> {
     }
     @Override
     public boolean remove(int index) {
-        return false;
+        return removeAt(index);
+
     }
 
     @Override
