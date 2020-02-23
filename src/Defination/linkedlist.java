@@ -60,7 +60,7 @@ public class linkedlist<E> implements UseAdt<E> {
 
     @Override
     public void print() {
-
+Node temp = head;
     }
 
     @Override
@@ -70,6 +70,38 @@ public class linkedlist<E> implements UseAdt<E> {
 
     @Override
     public void show() {
+
+    }
+
+    public linkedlist<Person> sort(linkedlist<Person> lis) {
+        Node check = head;
+        Node index = null;
+        int status;
+        if (head == null) {
+            return lis;
+        } else {
+            while (check != null) {
+                index = check.next;
+                while (index != null) {
+                    status = check.data.getFirst().compareToIgnoreCase(index.data.getFirst());
+                    if (status > 0) {
+                        Person temp = check.data;
+                        check.data = index.data;
+                        index.data = temp;
+                        index = index.next;
+                    } else {
+                        index = index.next;
+                    }
+                }
+                check = check.next;
+            }
+        }
+        return lis;
+    }
+
+
+    @Override
+    public void sort() {
 
     }
 
