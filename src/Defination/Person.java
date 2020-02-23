@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Person {
     private String First;
-    private String Last;
+    private String LastName;
     private ArrayList<String> list;
     private String email;
 
     public Person(String first, String last, ArrayList<String> list, String email) {
         First = first;
-        Last = last;
+        LastName = last;
         this.list = list;
         this.email = email;
     }
@@ -25,11 +25,11 @@ public class Person {
     }
 
     public String getLast() {
-        return Last;
+        return LastName;
     }
 
     public void setLast(String last) {
-        Last = last;
+        LastName = last;
     }
 
     public ArrayList<String> getList() {
