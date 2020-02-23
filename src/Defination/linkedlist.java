@@ -120,6 +120,7 @@ public class linkedlist<E> implements UseAdt<E> {
             reference = reference.next;
         }
     }
+
     @Override
     public boolean remove(int index) {
         return removeAt(index);
@@ -130,6 +131,28 @@ public class linkedlist<E> implements UseAdt<E> {
     public void show() {
 
     }
+
+    public void printSearchitem(String name) {
+        Node check = head;
+        while (check != null) {
+            System.out.println("........*.......*.......*.......*");
+            if (check.data.getFirst().equals(name)) {
+                System.out.print("FirstName :" + check.data.getFirst() + "\n");
+                System.out.println("LastName :" + check.data.getLast());
+                if (check.data.getList().size() > 1) {
+                    System.out.println("Contacts :" + check.data.getList());
+
+                } else if (check.data.getList().size() == 1) {
+                    System.out.println("Contact :" + check.data.getList());
+                }
+                System.out.println("email iD :" + check.data.getEmail());
+                System.out.println("........*.......*.......*.......*");
+
+            }
+            check = check.next;
+        }
+    }
+
 
     public linkedlist<Person> sort(linkedlist<Person> lis) {
         Node check = head;
