@@ -60,9 +60,23 @@ public class linkedlist<E> implements UseAdt<E> {
 
     @Override
     public void print() {
-Node temp = head;
-    }
+        Node reference = head;
+        System.out.println("........*.......*.......*.......*");
+        while (reference != null) {
+            System.out.print("FirstName :" + reference.data.getFirst() + "\n");
+            System.out.println("LastName :" + reference.data.getLast());
+            if (reference.data.getList().size() > 1) {
+                System.out.println("Contacts :" + reference.data.getList());
 
+            } else if (reference.data.getList().size() == 1) {
+                System.out.println("Contact :" + reference.data.getList());
+            }
+            System.out.println("email iD :" + reference.data.getEmail());
+            System.out.println("........*.......*.......*.......*");
+            System.out.println("........*.......*.......*.......*");
+            reference = reference.next;
+        }
+    }
     @Override
     public boolean remove(int index) {
         return false;
