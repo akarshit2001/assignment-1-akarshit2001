@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Operational {
+    Person person;
     public void addContact(linkedlist link) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> list1 = new ArrayList<>();
@@ -44,7 +45,10 @@ public class Operational {
         link.add(new Person(First, Last, list1, email));
     }
 
-    public void viewCOntact(linkedlist list) {
+    public void viewCOntact(linkedlist<Person> list) {
+        linkedlist<Person> lis = new linkedlist<>();
+        //lis = list.sort(list);
+        lis.print();
 
     }
 

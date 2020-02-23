@@ -43,7 +43,19 @@ public class linkedlist<E> implements UseAdt<E> {
 
     @Override
     public int search(String item) {
-        return 0;
+        Node check = head;
+        int c = 0;
+        while (check != null) {
+            if (check.data.getFirst().equals(item)) {
+                c++;
+            } else if (check == null) {
+                int d = 0;
+
+            }
+            check = check.next;
+
+        }
+        return c;
     }
 
     @Override
