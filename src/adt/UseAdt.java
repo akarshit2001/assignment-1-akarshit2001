@@ -15,4 +15,4 @@ public interface UseAdt<E> {
 
 }
 
-}
+
