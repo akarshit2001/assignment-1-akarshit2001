@@ -165,6 +165,7 @@ public class linkedlist<E> implements UseAdt<E> {
                         System.out.print("Contact : " + check.data.getList().get(i) + (i < size - 1 ? ", " : ""));
                     }
                 }
+                System.out.print("\n");
                 System.out.println("email iD :" + check.data.getEmail());
                 System.out.println("........*.......*.......*.......*");
 
