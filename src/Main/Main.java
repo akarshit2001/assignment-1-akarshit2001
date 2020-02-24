@@ -37,7 +37,7 @@ public class Main {
                     p.deleteContact(ls);
                     break;
                 case 5:
-                    System.out.println("Exiting...");
+                    System.out.println("Exiting...and Thank you!");
                     status = false;
                     break;
                 default:
