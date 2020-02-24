@@ -17,11 +17,13 @@ public class Operational {
         System.out.print("LastName:");
         String Last = sc.next();
         System.out.println("Contact Number");
+        System.out.println("Enter the contact number");
         list1.add(sc.next());
         while (true) {
             System.out.println("Would you like to add another number :y/n");
             String order = sc.next();
             if (order.equals("y")) {
+                System.out.println("Enter the contact number");
                 list1.add(sc.next());
             } else if (order.equals("n")) {
                 break;
@@ -32,12 +34,10 @@ public class Operational {
         String email = "";
         while (true) {
             System.out.println("Would you want to add email Id :y/n");
-
             String order1 = sc.next();
-
             if (order1.equals("y")) {
                 System.out.println("Enter the Email Id");
-                email = sc.nextLine();
+                list2.add(sc.next());
             } else if (order1.equals("n")) {
                 int p = 1;
                 break;
@@ -45,7 +45,7 @@ public class Operational {
                 System.out.println("Hey ! please enter valid command");
             }
         }
-        link.add(new Person(First, Last, list1, email));
+        link.add(new Person(First, Last, list1, list2));
     }
 
     public void viewCOntact(linkedlist<Person> list) {
