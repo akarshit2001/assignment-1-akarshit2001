@@ -13,6 +13,7 @@ public interface UseAdt<E> {
 
         void show();
 
+
 }
 
 
