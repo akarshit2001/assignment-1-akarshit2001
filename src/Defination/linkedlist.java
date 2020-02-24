@@ -207,7 +207,7 @@ public class linkedlist<E> implements UseAdt<E> {
 
     }
 
-    private static class Node {
+    public static class Node {
         private Person data;
         private Node next;
 
