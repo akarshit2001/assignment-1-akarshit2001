@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Operational {
     Person person;
+    Scanner sc = new Scanner(System.in);
     public void addContact(linkedlist link) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> list1 = new ArrayList<>();
@@ -65,6 +66,15 @@ public class Operational {
     }
 
     public void deleteContact(linkedlist linkedlist) {
+        String store = "";
+        System.out.println("Here all your contacts");
+        linkedlist.show();
+        System.out.print("Press the number against the contact to delete it");
+        int choice = sc.nextInt();
+        store = linkedlist.getIndex(choice - 1).getData().getFirst() + linkedlist.getIndex(choice - 1).getData().getLast();
+        boolean c = linkedlist.remove(choice - 1);
+        System.out.println(c == true ? store + "'s" + "contact deleted from list!" : "");
+
 
     }
 }
