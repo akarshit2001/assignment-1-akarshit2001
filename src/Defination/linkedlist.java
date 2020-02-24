@@ -122,8 +122,21 @@ public class linkedlist<E> implements UseAdt<E> {
                     System.out.print("Contact Number :" + reference.data.getList().get(0));
 
                 }
+
+                System.out.println(" ");
+                if (reference.data.getEmail().size() > 1) {
+                    System.out.print("Email ID (s): ");
+                    for (int i = 0; i < reference.data.getEmail().size(); i++) {
+                        System.out.print(reference.data.getEmail().get(i) + (i < reference.data.getEmail().size() - 1 ? ", " : ""));
+                    }
+
+                } else if (reference.data.getEmail().size() == 1) {
+                    System.out.print("Email ID  :" + reference.data.getEmail().get(0));
+
+                } else {
+                    System.out.println("Email ID : ");
+                }
                 System.out.print("\n");
-                System.out.println("Email ID :" + reference.data.getEmail());
                 System.out.println("-------- * -------- * -------- * --------");
                 reference = reference.next;
             }
