@@ -9,6 +9,7 @@ public class Operational {
     public void addContact(linkedlist link) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> list1 = new ArrayList<>();
+        ArrayList<String> list2 = new ArrayList<>();
         System.out.println("PLease fill the entry carefully");
         System.out.println("Please enter the name of the Person");
         System.out.print("FirstName :");
@@ -35,6 +36,7 @@ public class Operational {
             String order1 = sc.next();
 
             if (order1.equals("y")) {
+                System.out.println("Enter the Email Id");
                 email = sc.nextLine();
             } else if (order1.equals("n")) {
                 int p = 1;
@@ -49,6 +51,7 @@ public class Operational {
     public void viewCOntact(linkedlist<Person> list) {
         linkedlist<Person> lis = new linkedlist<>();
         lis = list.sort(list);
+
         lis.print();
 
     }
@@ -69,7 +72,7 @@ public class Operational {
         String store = "";
         System.out.println("Here all your contacts");
         linkedlist.show();
-        System.out.print("Press the number against the contact to delete it");
+        System.out.print("Press the number against the contact to delete it  ");
         int choice = sc.nextInt();
         store = linkedlist.getIndex(choice - 1).getData().getFirst() + linkedlist.getIndex(choice - 1).getData().getLast();
         boolean c = linkedlist.remove(choice - 1);
