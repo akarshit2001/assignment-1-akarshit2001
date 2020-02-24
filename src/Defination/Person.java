@@ -6,9 +6,9 @@ public class Person {
     private String First;
     private String LastName;
     private ArrayList<String> list;
-    private String email;
+    private ArrayList<String> email;
 
-    public Person(String first, String last, ArrayList<String> list, String email) {
+    public Person(String first, String last, ArrayList<String> list, ArrayList<String> email) {
         First = first;
         LastName = last;
         this.list = list;
@@ -40,11 +40,11 @@ public class Person {
         this.list = list;
     }
 
-    public String getEmail() {
+    public ArrayList<String> getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(ArrayList<String> email) {
         this.email = email;
     }
 
