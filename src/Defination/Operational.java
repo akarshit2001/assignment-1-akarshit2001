@@ -47,12 +47,20 @@ public class Operational {
 
     public void viewCOntact(linkedlist<Person> list) {
         linkedlist<Person> lis = new linkedlist<>();
-        //lis = list.sort(list);
+        lis = list.sort(list);
         lis.print();
 
     }
 
     public void searchContact(String Name, linkedlist list) {
+        int c = list.search(Name);
+        if (c == 0) {
+            System.out.println("No matches found !");
+        } else if (c >= 1) {
+            System.out.println(c + " " + "Matches found");
+            list.printSearchitem(Name);
+        }
+
 
     }
 
