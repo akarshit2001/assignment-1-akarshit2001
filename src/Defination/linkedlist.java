@@ -156,10 +156,14 @@ public class linkedlist<E> implements UseAdt<E> {
                 System.out.print("FirstName :" + check.data.getFirst() + "\n");
                 System.out.println("LastName :" + check.data.getLast());
                 if (check.data.getList().size() > 1) {
-                    System.out.println("Contacts :" + check.data.getList());
+                    for (int i = 0; i < size; i++) {
+                        System.out.print("Contacts : " + check.data.getList().get(i) + (i < size - 1 ? ", " : ""));
+                    }
 
                 } else if (check.data.getList().size() == 1) {
-                    System.out.println("Contact :" + check.data.getList());
+                    for (int i = 0; i < size; i++) {
+                        System.out.print("Contact : " + check.data.getList().get(i) + (i < size - 1 ? ", " : ""));
+                    }
                 }
                 System.out.println("email iD :" + check.data.getEmail());
                 System.out.println("........*.......*.......*.......*");
