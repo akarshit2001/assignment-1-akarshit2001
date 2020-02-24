@@ -114,9 +114,7 @@ public class linkedlist<E> implements UseAdt<E> {
                 }
 
             } else if (reference.data.getList().size() == 1) {
-                for (int i = 0; i < size; i++) {
-                    System.out.print("Contact : " + reference.data.getList().get(i) + (i < size - 1 ? ", " : ""));
-                }
+                System.out.print("Contact :" + reference.data.getList().get(0));
 
             }
             System.out.print("\n");
@@ -202,10 +200,6 @@ public class linkedlist<E> implements UseAdt<E> {
     }
 
 
-    @Override
-    public void sort() {
-
-    }
 
     public static class Node {
         private Person data;
