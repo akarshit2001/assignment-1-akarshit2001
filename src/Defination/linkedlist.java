@@ -172,17 +172,33 @@ public class linkedlist<E> implements UseAdt<E> {
                 System.out.print("FirstName :" + check.data.getFirst() + "\n");
                 System.out.println("LastName :" + check.data.getLast());
                 if (check.data.getList().size() > 1) {
-                    for (int i = 0; i < size; i++) {
-                        System.out.print("Contacts : " + check.data.getList().get(i) + (i < size - 1 ? ", " : ""));
+                    System.out.println("Contact Number(s) :");
+                    for (int i = 0; i < check.data.getList().size(); i++) {
+                        System.out.print(check.data.getList().get(i) + (i < check.data.getList().size() - 1 ? ", " : ""));
                     }
 
                 } else if (check.data.getList().size() == 1) {
-                    for (int i = 0; i < size; i++) {
-                        System.out.print("Contact : " + check.data.getList().get(i) + (i < size - 1 ? ", " : ""));
+                    for (int i = 0; i < check.data.getList().size(); i++) {
+                        System.out.print("Contact Number : " + check.data.getList().get(i) + (i < check.data.getList().size() - 1 ? ", " : ""));
                     }
                 }
+                System.out.println(" ");
+                if (check.data.getEmail().size() > 1) {
+                    System.out.print("Email ID (s): ");
+                    for (int i = 0; i < check.data.getEmail().size(); i++) {
+                        System.out.print(check.data.getEmail().get(i) + (i < check.data.getEmail().size() - 1 ? ", " : ""));
+                    }
+
+                } else if (check.data.getEmail().size() == 1) {
+                    System.out.print("Email ID  :" + check.data.getEmail().get(0));
+
+                } else {
+                    System.out.println("Email ID : ");
+                }
+
+
                 System.out.print("\n");
-                System.out.println("email iD :" + check.data.getEmail());
+
                 System.out.println("........*.......*.......*.......*");
 
             }
